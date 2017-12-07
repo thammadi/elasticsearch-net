@@ -15,7 +15,7 @@ namespace Tests.Framework.MockData
 		// not populated by generator. Used by ingest geoip test
 		public GeoIp GeoIp { get; set; }
 
-		public new static Faker<Developer> Generator { get; } =
+		public static Faker<Developer> Generator { get; } =
 			new Faker<Developer>()
 				.RuleFor(p => p.Id, p => IdState++)
 				.RuleFor(p => p.FirstName, p => p.Name.FirstName())
